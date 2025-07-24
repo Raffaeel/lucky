@@ -104,7 +104,7 @@ setTimeout(() => {
     } else if (sorteio === valor2) {
       player2.classList.add('highlight');
       mensagem.textContent = `🟢 Jogador 2 acertou! O número sorteado foi ${sorteio}.\nJogador 1, seu castigo é: 
-     </br> ${castigoAleatorio()}`;
+   ${castigoAleatorio()}`;
     } else {
       mensagem.textContent = `❌ Ninguém acertou. O número sorteado foi ${sorteio}.`;
     }
