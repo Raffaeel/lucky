@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUCKY GUESS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🎯LUCKY GUESS🎯</h1>
+
+  <div class="scene">
+    <div class="cube auto-rotate" id="cube">
+      
+      <div class="face face1">
+        <div class="dot center"></div>
+      </div>
+
+      <div class="face face2">
+        <div class="dot top-left"></div>
+        <div class="dot bottom-right"></div>
+      </div>
+      
+      <div class="face face3">
+        <div class="dot top-left"></div>
+        <div class="dot center"></div>
+        <div class="dot bottom-right"></div>
+      </div>
+
+      <div class="face face4">
+        <div class="dot top-left"></div>
+        <div class="dot top-right"></div>
+        <div class="dot bottom-left"></div>
+        <div class="dot bottom-right"></div>
+      </div>
+
+      <div class="face face5">
+        <div class="dot top-left"></div>
+        <div class="dot top-right"></div>
+        <div class="dot center"></div>
+        <div class="dot bottom-left"></div>
+        <div class="dot bottom-right"></div>
+      </div>
+
+      <div class="face face6">
+        <div class="dot top-left"></div>
+        <div class="dot middle-left"></div>
+        <div class="dot bottom-left"></div>
+        <div class="dot top-right"></div>
+        <div class="dot middle-right"></div>
+        <div class="dot bottom-right"></div>
+      </div>
+
+    </div>
+  </div>
+<div id="mensagem"></div>
+<audio id="musicaFundo" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+  Seu navegador não suporta áudio.
+</audio>
+
+            <footer>
+               
+                <div class="controlers">
+            <input id="player1" type="number" min="1" max="6" />
+            <input id="player2" type="number" min="1" max="6" />
+
+                <button id="start">jogar</button>
+                </div>
+</footer>
+
+
+
+  <script src="controlers.js"></script>
+  
+</body>
+</html>

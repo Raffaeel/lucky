@@ -1,0 +1,221 @@
+/* Estrutura principal da página */
+body {
+  background: #111;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Título no topo */
+h1 {
+  margin-top: 20px;
+  font-size: 2rem;
+  color: rgb(250, 252, 253);
+  text-align: center;
+  animation: colorChange 5s infinite;
+}
+
+/* Animação de cor no título */
+@keyframes colorChange {
+  0%   { color: #ff4b4b; }
+  25%  { color: #ffd700; }
+  50%  { color: #4bff4b; }
+  75%  { color: #4b9bff; }
+  100% { color: #ff4b4b; }
+}
+
+/* Container do dado */
+.scene {
+  width: 150px;
+  height: 150px;
+  perspective: 800px;
+}
+
+/* Cubo */
+.cube {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+/* Faces do cubo */
+.face {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgb(232, 11, 11);
+  border-radius: 5px;
+}
+
+.face1 { transform: rotateY(0deg) translateZ(75px); }
+.face2 { transform: rotateY(90deg) translateZ(75px); }
+.face3 { transform: rotateY(180deg) translateZ(75px); }
+.face4 { transform: rotateY(-90deg) translateZ(75px); }
+.face5 { transform: rotateX(90deg) translateZ(75px); }
+.face6 { transform: rotateX(-90deg) translateZ(75px); }
+
+/* Pontos do dado */
+.dot {
+  width: 15px;
+  height: 15px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.center         { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.top-left       { top: 25px; left: 25px; }
+.top-right      { top: 25px; right: 25px; }
+.middle-left    { top: 50%; left: 25px; transform: translateY(-50%); }
+.middle-right   { top: 50%; right: 25px; transform: translateY(-50%); }
+.bottom-left    { bottom: 25px; left: 25px; }
+.bottom-right   { bottom: 25px; right: 25px; }
+
+/* Animação automática de rotação */
+@keyframes spin {
+  0%   { transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg); }
+}
+
+.auto-rotate {
+  animation: spin 2s infinite linear;
+}
+
+/* Classes para mostrar a face correta do dado */
+.show-1 { transform: rotateX(0deg) rotateY(0deg) translateZ(75px); }
+.show-2 { transform: rotateX(-90deg) rotateY(0deg) translateZ(75px); }
+.show-3 { transform: rotateX(0deg) rotateY(90deg) translateZ(75px); }
+.show-4 { transform: rotateX(0deg) rotateY(-90deg) translateZ(75px); }
+.show-5 { transform: rotateX(90deg) rotateY(0deg) translateZ(75px); }
+.show-6 { transform: rotateX(180deg) rotateY(0deg) translateZ(75px); }
+
+/* Pisca o input do vencedor */
+.highlight {
+  border: 3px solid limegreen;
+  animation: blink 1s ease-in-out infinite;
+  outline: none;
+}
+
+@keyframes blink {
+  0%, 100% { border-color: limegreen; }
+  50% { border-color: transparent; }
+}
+
+/* Controles fixos no rodapé */
+.controlers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 5px;
+
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Responsivo para tablets */
+@media (max-width: 900px) and (min-width: 601px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .scene,
+  .cube,
+  .face {
+    width: 120px;
+    height: 120px;
+  }
+
+  .face1 { transform: rotateY(0deg) translateZ(60px); }
+  .face2 { transform: rotateY(90deg) translateZ(60px); }
+  .face3 { transform: rotateY(180deg) translateZ(60px); }
+  .face4 { transform: rotateY(-90deg) translateZ(60px); }
+  .face5 { transform: rotateX(90deg) translateZ(60px); }
+  .face6 { transform: rotateX(-90deg) translateZ(60px); }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .top-left       { top: 20px; left: 20px; }
+  .top-right      { top: 20px; right: 20px; }
+  .middle-left    { top: 50%; left: 20px; transform: translateY(-50%); }
+  .middle-right   { top: 50%; right: 20px; transform: translateY(-50%); }
+  .bottom-left    { bottom: 20px; left: 20px; }
+  .bottom-right   { bottom: 20px; right: 20px; }
+}
+
+/* Responsivo para celulares */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .scene,
+  .cube,
+  .face {
+    width: 100px;
+    height: 100px;
+  }
+
+  .face1 { transform: rotateY(0deg) translateZ(50px); }
+  .face2 { transform: rotateY(90deg) translateZ(50px); }
+  .face3 { transform: rotateY(180deg) translateZ(50px); }
+  .face4 { transform: rotateY(-90deg) translateZ(50px); }
+  .face5 { transform: rotateX(90deg) translateZ(50px); }
+  .face6 { transform: rotateX(-90deg) translateZ(50px); }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .top-left       { top: 15px; left: 15px; }
+  .top-right      { top: 15px; right: 15px; }
+  .middle-left    { top: 50%; left: 15px; transform: translateY(-50%); }
+  .middle-right   { top: 50%; right: 15px; transform: translateY(-50%); }
+  .bottom-left    { bottom: 15px; left: 15px; }
+  .bottom-right   { bottom: 15px; right: 15px; }
+
+  .controlers {
+    gap: 10px;
+    padding: 8px;
+    bottom: 10px;
+    flex-wrap: wrap;
+  }
+}
+#mensagem {
+  margin-top: 20px;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+
+
+}
+/* Seu CSS original, acrescente isto no final para a luz verde */
+
+.highlight {
+  box-shadow: 0 0 15px 5px limegreen;
+  border: 2px solid limegreen;
+  animation: blink 1s ease-in-out infinite;
+  outline: none;
+}
+
+@keyframes blink {
+  0%, 100% { border-color: limegreen; }
+  50% { border-color: transparent; }
+}
+
+/* O restante do seu CSS fica igual ao que você já tem. */
