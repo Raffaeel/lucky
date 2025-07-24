@@ -159,8 +159,9 @@ h1 {
 
 /* Responsivo para celulares */
 @media (max-width: 600px) {
-  h1 {
-    font-size: 1.4rem;
+  h1 {font-size: 1.4rem;
+    margin-top: 10vh; 
+    
   }
 
   .scene,
