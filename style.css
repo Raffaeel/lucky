@@ -159,13 +159,9 @@ h1 {
 
 /* Responsivo para celulares */
 @media (max-width: 600px) {
-  body {
-    justify-content: flex-start;
-    padding-top: 20px; /* para dar um espaçamento confortável */
-  }
   h1 {
+  margin-top: 5px;
     font-size: 1.4rem;
-    margin-top: 0; /* deixe sem margem para não empurrar demais */
   }
 }
 
