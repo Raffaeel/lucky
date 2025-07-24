@@ -159,10 +159,16 @@ h1 {
 
 /* Responsivo para celulares */
 @media (max-width: 600px) {
-  h1 {font-size: 1.4rem;
-    margin-top: 10vh; 
-    
+  body {
+    justify-content: flex-start;
+    padding-top: 20px; /* para dar um espaçamento confortável */
   }
+  h1 {
+    font-size: 1.4rem;
+    margin-top: 0; /* deixe sem margem para não empurrar demais */
+  }
+}
+
 
   .scene,
   .cube,
