@@ -74,20 +74,7 @@ bTn.addEventListener('click', () => {
   
   
   
-  window.onload = () => {
-  const musicaFundo = document.getElementById("musicaFundo");
-  musicaFundo.play();
-};
- 
-setTimeout(() => {
-  // Pausa a música
-  document.getElementById("musicaFundo").pause();
 
-  // Continua com a lógica do jogo (ex: mostrar resultado, castigo etc.)
-  verificarVencedor();
-}, 3000); // tempo da rotação em milissegundos
-
-  
   
   
   /*logica do jogo */
