@@ -13,6 +13,7 @@ Este é um mini jogo de sorte criado com HTML, CSS e JavaScript, onde dois jogad
 ## 📷 Demonstração
 
 (Adicione aqui uma imagem ou gif da tela do jogo, se quiser)
+<img width="622" height="632" alt="JOGO" src="https://github.com/user-attachments/assets/dafca76a-8d21-42d6-b24b-a294f4d3ca69" />
 
 ---
 
