@@ -3,7 +3,7 @@
 Este é um mini jogo de sorte criado com HTML, CSS e JavaScript, onde dois jogadores testam quem consegue acertar o número do dado. O projeto possui:
 
 - Animação 3D realista de um dado girando.
-- Música de fundo ambiente.
+
 - Verificação de acerto do número sorteado.
 - Castigo para quem erra.
 - Interface simples e responsiva.
